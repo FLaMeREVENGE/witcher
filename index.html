@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Wiedźmin - Podróż</title>
+        <meta charset="utf-8"> <!--polska czcionka-->
+        <link rel="stylesheet" href=style.css> <!--folder CSS-->
+        <script src="https://use.fontawesome.com/6afee8ac69.js"></script> <!--strona z ikonkami-->
+    </head>
+    <body>
+        <div class="hero"> <!--całe body-->
+        <div class="nav-bar"> <!--logo, linki oraz zaloguj-->
+                <div class="nav-logo"> <!--logo-->
+                    <img src="obrazy/witcher_logo.png">
+                </div>
+                <div class="nav-links" id="nav-links"> <!--'id' prowadzi na początek strony-->
+                    <i class="fa fa-close" aria-hidden="true" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="#"><li>STRONA</li></a>
+                    <a href="#"><li>LINKI</li></a>
+                    <a href="#"><li>KONTAKT</li></a>
+                </ul>
+                <button type="button" class="btn">ZALOGUJ</button>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+            </div>
+            <div class="banner-title">
+                <h1>Jeśli cel przyświeca, sposób musi się znaleźć</h1>
+                <button type="button" class="btn">CZYTAJ</button>
+                </div>
+                <div class="vertical-bar"> <!--boczne ikonki-->
+                   <div class="search-icon">
+                       <i class="fa fa-list" aria-hidden="true"></i>
+                       <i class="fa fa-search" aria-hidden="true"></i>
+                   </div>
+                   <div class="social-icons">
+                       <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                       <i class="fa fa-instagram" aria-hidden="true"></i>
+                       <i class="fa fa-twitter" aria-hidden="true"></i>
+                       <i class="fa fa-pinterest" aria-hidden="true"></i>
+                   </div>
+                </div>
+                <div class="notifications"> <!--Trailer-->
+                    <div class="contents">
+                        <small>THE WITCHER<br><span>TRAILER NETFLIX</span></small>
+                        </div>
+                    <div class="notifications-img">
+                        <a href="https://www.youtube.com/watch?v=ndl1W4ltcmg"><img
+                        src="obrazy/witcher_play.png" src="" alt="THE WITCHER | MAIN TRAILER | NETFLIX"></a>
+                    </div>
+                </div>
+        </div>
+        <script>
+        var show = document.getElementById("nav-links");
+            function showMenu(){
+                show.style.right = "0";
+            }
+            
+            function closeMenu(){
+                show.style.right = "-200px";
+            }
+        </script>
+        
+        
+        
+        
+    </body>
+</html>

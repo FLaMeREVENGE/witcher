@@ -1,0 +1,262 @@
+
+*{/*wartości i właściwości dla wszystkich*/
+    margin: 0; /*margines pudełków*/
+    padding: 0;/*obramowanie elementu*/
+    font-family: Sans-Serif;
+
+}
+
+.hero{ /*całe body*/
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6)), url(obrazy/witcher.jpg); /*fajny sposób na przyciemnienie tła*/
+    background-position: center; /*obraz znajduje się domyślnie w centrum*/
+    background-size: cover; /*'cover' skaluje obraz bez rozciagnia, nie zostawia pustego miejsca*/
+    overflow-x: hidden; /*ukrywa niemieszczące się elemnty w poziomie*/
+    position: relative; /*element może zostać przesuniety*/
+}
+
+.nav-bar{ /*logo, linki oraz zaloguj*/
+    display: flex; /*układ elastyczny, tworzy bloki w poziomie*/
+    padding: 40px 120px;
+}
+
+.nav-logo img{ /*logo*/
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links{
+    flex: 1; /*elastyczność obszaru*/
+}
+
+.nav-links ul{ /*cały blok linków*/
+    margin-left: 50px;
+    display: inline; /*wszystko układa się w poziomie jeden obok drugiego*/
+}
+
+.nav-links ul li{ /*same napisy bloku linków*/
+    list-style: none; 
+    display: inline-block; /*wszystko układa się w poziomie jeden po drugim lecz z cechami jak inline*/
+    padding: 15px 25px;
+    font-family: 'kevlar_underwearregular';
+    font-size: 14px;
+}
+
+.nav-links ul a{ /*to co znajduje się wśród bloków napisów z osobna*/
+    color: #fff;
+    text-decoration: none; /*bez dużych leter na poczatku*/
+    font-size: 13px;
+}
+
+.nav-links ul li::after{ /*efekt do końcowej zawartości*/
+    content: ''; /*dodanie dodatkowej treści*/
+    width: 0; /*dzięki liczbie 0 sparwia że go nie widzimy*/
+    height: 2px;
+    background: white;
+    display: block; /*wszystko układa się w pionie jeden pod drugim*/
+    margin: auto;
+    transition: .5s; /*czas pojawienia się*/
+}
+
+.nav-links ul li:hover::after{
+    width: 100%; /*widzimy linię nq 100%*/
+}
+
+.btn{ /*zaloguj*/
+    padding: 15px 25px;
+    border: 0;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'kevlar_underwearregular';
+}
+
+.nav-links .btn{ 
+    float: right; /*przenosimy element ZALOGUJ jak najdalej na prawo*/
+}
+
+.banner-title{ /*główny napis w całości "Jeśli cel przyświeca..."*/
+    margin: 80px 130px;
+    color: #fff;
+}
+
+.banner-title h1{ /*sam napis*/
+    font-size: 54px;
+    margin-bottom: 30px;
+}
+
+.vertical-bar{ /*boczne ikonki*/
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 0;
+    position: absolute; /*element zostaje usuniety jednak ma dalej on wpływ na położenie*/
+}
+
+.search-icon{ /*blok ikonek*/
+    height: 60%;
+    width: 80px;
+}
+
+.search-icon .fa{ /*same ikonki ich wygląd*/
+    margin: 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.social-icons{
+    height: 35%;
+    width: 80px;
+    background: white;
+    text-align: center;
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+}
+
+.social-icons .fa{
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%; /*zaokrąglenie obramowania*/
+    cursor: pointer;
+}
+
+.notifications{ /*trailer*/
+    display: flex;
+    width: 400px;
+    right: 0;
+    bottom: 0;
+    position: absolute; /*absolutna pozycja sprawia, że dzięki 'right' i 'bottom' jest w prawym dolnym rogu*/ 
+    background: white;
+    align-items: center; /*wyśrodkowuje elementy znajdujące się w środku, czyli napis i zdjecie*/
+}
+
+.contents{ /*napis na trailerze*/
+    flex-basis: 50%;
+    padding: 15px;
+}
+
+.contents small{ /*napis na górze*/
+    font-size: 30px;
+    font-family: 'the_wild_breath_of_zeldaRg';
+    padding-left: 10px;
+}
+
+.contents small span{ /*napis na dole*/
+    font-size: 10px;
+    padding: 10px 48px;
+}
+
+.notifications-img{
+    flex-basis: 50%;
+}
+
+.notifications-img img{
+    width: 100%;
+}
+
+.contents a{
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    margin: 0 10px;
+}
+
+.nav-bar .fa{
+    display: none;
+}
+
+@media (max-width: 700px){
+    .vertical-bar{
+        display: none;
+    }
+    .banner-title{
+        margin: 80px 40px;
+    }
+    .banner-title h1{
+        font-size: 50px;
+    }
+    .notifications{
+        width: 100%;
+    }
+    .nav-bar{
+        padding: 10px 30px;
+    }
+    .fa-bars{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .nav-bar .fa{
+        display: block;
+        color: #fff;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        background: #000;
+        top: 0;
+        right: -200px;
+        position: absolute;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .nav-links ul a{
+        display: block;
+    }
+    .nav-links .btn{
+        float: none;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'kevlar_underwearregular';
+    src: url('czcionki/kevlar_underwear-webfont.woff2') format('woff2'),
+         url('czcionki/kevlar_underwear-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'the_wild_breath_of_zeldaRg';
+    src: url('czcionki/the_wild_breath_of_zelda-webfont.woff2') format('woff2'),
+         url('czcionki/the_wild_breath_of_zelda-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
