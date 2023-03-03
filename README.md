@@ -6,12 +6,11 @@
 Another project in a series of simple websites for novice programmers :mortar_board:. This time we show how you can easily show a responsive website without any libraries like Bootstrap. Our website can now be viewed on any computers :computer: and phones :iphone:
 
 ## Technologes
-- [x] HTML
-- [x] CSS
-- [] Bootstrap
+- :white_check_mark:HTML
+- :white_check_mark:CSS
+- :x:Bootstrap
 
-
-## My Portfolio :smiling_imp:
+# My Portfolio :smiling_imp:
 - [Behance](https://www.behance.net/karolkomor1b9a) :computer:
 
 ![Behance Profile](behance_banner.png)
