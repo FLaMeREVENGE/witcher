@@ -11,7 +11,7 @@ Another project in a series of simple websites for novice programmers :mortar_bo
 - :x:Bootstrap
 
 # My Portfolio :smiling_imp:
-### [Behance](https://www.behance.net/karolkomor1b9a) :computer:
+### [Behance](https://www.behance.net/KarolKomorowski) :computer:
 
 ![Behance Profile](behance_banner.png)
 ### [Github](https://github.com/FLaMeREVENGE) :paw_prints:
